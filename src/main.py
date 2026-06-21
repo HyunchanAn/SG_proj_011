@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from src.schemas import TopographyInput, ProcessabilityResult
 from src.model import calculate_processability
 

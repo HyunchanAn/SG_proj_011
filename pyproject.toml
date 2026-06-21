@@ -22,6 +22,7 @@ dev = [
     "pytest-cov",
     "mypy",
     "ruff",
+    "httpx",
 ]
 
 [tool.ruff]
@@ -31,6 +32,7 @@ target-version = "py310"
 [tool.mypy]
 strict = false
 ignore_missing_imports = true
+explicit_package_bases = true
 
 [tool.pytest.ini_options]
 addopts = "--cov=src --cov-report=term-missing"
