@@ -1,4 +1,3 @@
-import pytest
 from src.schemas import TopographyInput
 from src.model import calculate_processability
 
