@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+sg_proj_011.egg-info/PKG-INFO
+sg_proj_011.egg-info/SOURCES.txt
+sg_proj_011.egg-info/dependency_links.txt
+sg_proj_011.egg-info/requires.txt
+sg_proj_011.egg-info/top_level.txt
+src/__init__.py
+src/main.py
+src/model.py
+src/schemas.py
+tests/test_main.py
+tests/test_model.py
