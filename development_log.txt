@@ -1,0 +1,7 @@
+2026-06-22
+- 프로젝트 초기화: SG_proj_011 (필요 가공성 수준 판별 모듈)
+- 디렉토리 구조 설정: src/, tests/, docs/ 적용 (표준 템플릿 준수)
+- pyproject.toml 작성: FastAPI, Pydantic, Ruff, mypy, pytest, pytest-cov 설정 포함
+- Pydantic 스키마 정의 (TopographyInput, ProcessabilityResult) 적용
+- 3D stress-strain simplified physics 모델 기반 로직 및 Fallback(예외 처리) 구현
+- 기본 FastAPI 앱(src/main.py) 구현 및 테스트 코드(tests/test_model.py) 추가
