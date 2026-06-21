@@ -5,3 +5,6 @@
 - Pydantic 스키마 정의 (TopographyInput, ProcessabilityResult) 적용
 - 3D stress-strain simplified physics 모델 기반 로직 및 Fallback(예외 처리) 구현
 - 기본 FastAPI 앱(src/main.py) 구현 및 테스트 코드(tests/test_model.py) 추가
+
+
+[2026-06-22] 대규모 아키텍처 통일성 반영: pyproject.toml, Dockerfile, docker-compose.yml, CI/CD 추가 완료.
