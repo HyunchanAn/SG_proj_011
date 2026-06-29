@@ -1,3 +1,4 @@
+# 가공 가혹도 연산 물리 모델의 곡률 반경 계측 수치 계산(가우시안 평활화 포함) 및 경계 조건(음수 곡률반경 등) 예외 판정 무결성을 검증하는 테스트 코드입니다.
 from src.schemas import TopographyInput
 from src.model import calculate_processability
 

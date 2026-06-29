@@ -1,3 +1,4 @@
+# 가공 공정 가혹도 판별 모듈의 FastAPI 엔드포인트(/calculate_processability) 및 입력 데이터 예외 발생 시의 동적 폴백 처리 유효성을 검증하는 API 테스트 코드입니다.
 from fastapi.testclient import TestClient
 from src.main import app
 
