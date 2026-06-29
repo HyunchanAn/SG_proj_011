@@ -28,3 +28,5 @@ graph TD
 
 ---
 *Updated by System: 2026-06-29 (Resolved 260627 Analysis Report priority issues)*
+## 최신 업데이트 내역 (2026-06-29)
+- 노이즈에 의한 예외 판정을 막기 위해, 가공 가혹도 판별기 내부에 가우시안 곡률 반경의 평활화(Smoothing) 완충 로직 도입.
