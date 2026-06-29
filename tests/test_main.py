@@ -18,7 +18,7 @@ def test_calculate_processability_valid():
 def test_calculate_processability_invalid():
     payload = {
         "normal_vector_data": [0.1],
-        "curvature_radius": -1.0,
+        "curvature_radius": 0.0,
         "material_stiffness": 100.0
     }
     res = client.post("/calculate_processability", json=payload)

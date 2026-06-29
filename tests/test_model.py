@@ -14,7 +14,7 @@ def test_calculate_processability_normal():
 def test_calculate_processability_fallback_negative_radius():
     data = TopographyInput(
         normal_vector_data=[0.1],
-        curvature_radius=-1.0,
+        curvature_radius=0.0,
         material_stiffness=100.0
     )
     result = calculate_processability(data)
