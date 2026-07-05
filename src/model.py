@@ -1,3 +1,4 @@
+from loguru import logger
 from .schemas import TopographyInput, ProcessabilityResult
 
 def calculate_processability(input_data: TopographyInput) -> ProcessabilityResult:
@@ -6,6 +7,7 @@ def calculate_processability(input_data: TopographyInput) -> ProcessabilityResul
     정상 벡터 데이터, 곡률 반경, 재질 강도를 기반으로 스트레스/변형률을 계산.
     단일 지점 곡률 튐 노이즈 방지를 위해 주변 법선 벡터 분포의 평균 편차를 평활화 가중치로 적용합니다.
     """
+    logger.info(f"011 Model: Evaluating processability. Stiffness: {input_data.material_stiffness}, Curvature Radius: {input_data.curvature_radius}")
     try:
         if input_data.curvature_radius == 0:
             raise ValueError("Curvature radius cannot be 0.")
@@ -44,6 +46,7 @@ def calculate_processability(input_data: TopographyInput) -> ProcessabilityResul
             level = 5
             reason = "Very high stress; extremely hard material."
             
+        logger.info(f"011 Model: Processability evaluation success. Level: {level} (Computed Stress: {stress:.4f})")
         return ProcessabilityResult(level=level, is_fallback=False, reason=reason)
         
     except Exception as e:
@@ -54,6 +57,7 @@ def calculate_processability(input_data: TopographyInput) -> ProcessabilityResul
         elif input_data.material_stiffness < 50:
             fallback_level = 2
             
+        logger.warning(f"011 Model: Calculation failure. Fallback to Level: {fallback_level}. Error: {e}")
         return ProcessabilityResult(
             level=fallback_level, 
             is_fallback=True, 
