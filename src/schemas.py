@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field
 
 class TopographyInput(BaseModel):
     normal_vector_data: list[float]
