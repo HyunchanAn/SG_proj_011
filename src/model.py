@@ -9,8 +9,8 @@ def calculate_processability(input_data: TopographyInput) -> ProcessabilityResul
     """
     logger.info(f"011 Model: Evaluating processability. Stiffness: {input_data.material_stiffness}, Curvature Radius: {input_data.curvature_radius}")
     try:
-        if input_data.curvature_radius == 0:
-            raise ValueError("Curvature radius cannot be 0.")
+        if abs(input_data.curvature_radius) < 0.01:
+            raise ValueError("곡률 반경이 물리적 연산 한계(0.01mm) 미만으로 극단적으로 작아 공정 해석이 불가능합니다.")
         if input_data.material_stiffness < 0:
             raise ValueError("Material stiffness cannot be negative.")
         if not input_data.normal_vector_data:
