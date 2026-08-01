@@ -1,5 +1,7 @@
 from loguru import logger
-from .schemas import TopographyInput, ProcessabilityResult
+
+from .schemas import ProcessabilityResult, TopographyInput
+
 
 def calculate_processability(input_data: TopographyInput) -> ProcessabilityResult:
     """

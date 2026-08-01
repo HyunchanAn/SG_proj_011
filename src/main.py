@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-from src.schemas import TopographyInput, ProcessabilityResult
-from src.model import calculate_processability
 from loguru import logger
+
+from src.model import calculate_processability
+from src.schemas import ProcessabilityResult, TopographyInput
 
 app = FastAPI(title="SG_proj_011 - Processability Level Determination")
 

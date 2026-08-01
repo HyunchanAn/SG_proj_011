@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 
+
 class TopographyInput(BaseModel):
     normal_vector_data: list[float]
     curvature_radius: float
